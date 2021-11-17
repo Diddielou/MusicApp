@@ -1,0 +1,63 @@
+== Emoba Assignment 1 - FreezerApp
+
+=== Bearbeitet von
+
+* Vorname Nachname
+
+=== Abgabe
+
+* _Klasse 5iCa_, Montag, 6.12.2021, 8:00 Uhr
+* _Klasse 5iCb_, Mittwoch, 8.12.2021, 12:00 Uhr
+
+Die Abgabe erfolgt durch ein "Push" auf den Master-Branch Ihres GitHub-Repositories.
+
+=== Initiale Schritte
+
+* Tragen Sie ihren Namen unter "Bearbeitet von" ein.
+* Pushen Sie diese Änderung am besten sofort ins Git-Repository (z.B. via "VCS -> Commit… -> Commit&Push")
+
+=== Die Aufgabe: MusicPlayer für Deezer
+
+Entwerfen und implementieren Sie einen MusicPlayer für Deezer als native Android App.
+
+Es handelt sich um eine Einzelarbeit. Sich gegenseitig zu unterstützen ist durchaus erwünscht (am besten via Posting in Teams). Falls einzelne Funktionen gemeinsam entwickelt werden, ist dies im Code entsprechend zu markieren. Ansonsten wird es Plagiat gewertet.
+
+Die im Unterricht gezeigte App ist nur eine mögliche Umsetzung des gewünschten Funktionsumfangs. Sie können dieses UI übernehmen oder aber einen eigenen Entwurf, beispielsweise wie im Modul uidC erarbeitet, umsetzen.
+
+Anforderungen:
+
+* Gewünschte Funktionalität
+** Suche nach Album, nach Song, Anzeige der Radio-Stations und verwalten von Lieblings-Songs.
+*** Anzeige der Liste von gefundenen Songs
+*** Anzeige der Liste der gefundenen Alben und der Liste der Songs eines Albums
+*** Anzeige der Liste der Songs einer Radio-Station
+*** Anzeige der Liste von Lieblings-Songs
+** Abspielen, Pausieren von Songs einer Song-Liste. Nochmaliges Spielen eines Songs von Beginn an. Sprung zum nächsten Song.
+* Verwendung des Deezer-API
+** https://developers.deezer.com/api
+* Das UI ist komplett mit Jetpack Compose zu implementieren.
+** https://developer.android.com/jetpack/compose
+* Implementierungssprache für die gesamte Applikation ist Kotlin.
+* Die im Unterricht erarbeitete Grundstruktur einer Android-App ist anzuwenden.
+* Das Deezer-Logo muss an prominenter Stelle sichtbar sein (Vorgabe aus den Lizenzbedingungen)
+* Weitere Libraries als die, die im Unterricht verwendet wurden, sind nicht erlaubt.
+
+
+=== Bewertung
+
+Es können in diesem Assignment maximal 4 Punkte erreicht werden. Der Fokus liegt dabei, neben der Umsetzung der gewünschten Funktionalität, auf der Code-Qualität. Der Coolness-Faktor der Applikation wird über den Coolest App Award berücksichtigt.
+
+* 4 Punkte
+** Umsetzung der gesamten gewünschten Funktionalität und der oben genannten Grundanforderungen
+** Strukturierung der App in 3 Layer
+** UI Code ist klar strukturiert in unabhängige Screens und via Composable Functions.
+** TestCases für ViewModels, Data Klassen und Services
+* 1 Punkt
+** Ein Song wird via Deezer-API bezogen, der Titel des Songs und des Interpreten werden angezeigt. Der Song kann abgespielt und pausiert werden.
+* 0 Punkte
+** falls die Kriterien für einen Punkt nicht erfüllt sind ;-)
+** falls das Deezer-API nicht verwendet wird
+*** die Song-Informationen wie Titel und Preview-URL müssen via API (unter `https://api.deezer.com/`) bezogen werden
+** falls das Projekt nicht kompilierfähig ist
+** falls die App direkt beim Aufstarten abstürzt
+** für Plagiate
