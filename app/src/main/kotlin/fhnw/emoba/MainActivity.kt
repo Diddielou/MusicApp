@@ -14,7 +14,6 @@ class MainActivity : ComponentActivity() {
 
         app = FreezerApp
 
-
         app.initialize(activity = this)
 
         setContent {
