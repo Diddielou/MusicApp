@@ -1,9 +1,7 @@
 package fhnw.emoba.freezerapp.data.impl
 
-import androidx.compose.ui.graphics.asImageBitmap
 import fhnw.emoba.freezerapp.data.*
 import org.json.JSONObject
-import java.lang.Exception
 
 class RemoteFreezerService : IFreezerService {
 

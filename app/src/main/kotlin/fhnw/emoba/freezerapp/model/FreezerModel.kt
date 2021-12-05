@@ -8,8 +8,11 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.asImageBitmap
-import fhnw.emoba.freezerapp.data.*
-import fhnw.emoba.freezerapp.data.impl.*
+import fhnw.emoba.freezerapp.data.Album
+import fhnw.emoba.freezerapp.data.Radio
+import fhnw.emoba.freezerapp.data.bitmap
+import fhnw.emoba.freezerapp.data.impl.DEFAULT_IMAGE
+import fhnw.emoba.freezerapp.data.impl.IFreezerService
 import fhnw.emoba.freezerapp.data.impl.ISearch
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

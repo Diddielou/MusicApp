@@ -12,7 +12,6 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.PlayCircleOutline
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -31,12 +30,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import fhnw.emoba.R
 import fhnw.emoba.freezerapp.data.*
-import fhnw.emoba.freezerapp.data.impl.RemoteFreezerService
 import fhnw.emoba.freezerapp.data.impl.ISearch
+import fhnw.emoba.freezerapp.data.impl.RemoteFreezerService
 import fhnw.emoba.freezerapp.model.FreezerModel
 import fhnw.emoba.freezerapp.model.Screen
 import fhnw.emoba.freezerapp.model.Tab
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 // 1 RadioScreen lädt noch keine Lieder (keine sichtbar)

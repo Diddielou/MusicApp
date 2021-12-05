@@ -3,7 +3,6 @@ package fhnw.emoba.freezerapp.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.PlayCircleOutline
@@ -17,7 +16,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import fhnw.emoba.freezerapp.data.Album
 import fhnw.emoba.freezerapp.data.Radio
-import fhnw.emoba.freezerapp.data.impl.DEFAULT_IMAGE
 import fhnw.emoba.freezerapp.data.impl.ISearch
 import fhnw.emoba.freezerapp.model.FreezerModel
 import fhnw.emoba.freezerapp.model.Screen
