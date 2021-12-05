@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import fhnw.emoba.freezerapp.FreezerApp
+import fhnw.emoba.freezerapp.ui.screens.StartApp
 
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
         app.initialize(activity = this)
 
         setContent {
-            app.CreateUI()
+            StartApp(app)
         }
     }
 
@@ -29,5 +30,7 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         app.onStop(activity = this)
     }
+
+
 }
 

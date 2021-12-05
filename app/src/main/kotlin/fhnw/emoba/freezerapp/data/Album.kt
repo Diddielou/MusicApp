@@ -1,31 +1,50 @@
 package fhnw.emoba.freezerapp.data
 
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import org.json.JSONArray
+import androidx.compose.runtime.setValue
+import fhnw.emoba.freezerapp.data.impl.DEFAULT_IMAGE
+import fhnw.emoba.freezerapp.data.impl.IJSON
 import org.json.JSONObject
 
-data class Album(val json: JSONObject) {
+data class Album(override val json: JSONObject?) : IJSON(json) {
+    val id = json?.optInt("id")
+    val title = json?.optString("title")
+    val cover = json?.optString("cover")
+    val coverSmall = json?.optString("cover_small")
+    val coverBig = json?.optString("cover_big")
+    val coverXl = json?.optString("cover_xl")
+    val tracklist = json?.optString("tracklist")
+    var tracks by mutableStateOf(emptyList<Track>())
+    var coverImageSmall by mutableStateOf(DEFAULT_IMAGE)
+    var coverImageBig by mutableStateOf(DEFAULT_IMAGE)
+    var artist = json?.optJSONObject("artist")?.let { Artist(it) }
 
-    val id = json.getInt("id")
-    val title  = json.getString("title")
-    val share = json.getString("share")
-    val cover_small= json.getString("cover_small") // URL
-    val cover_medium = json.getString("cover_medium") // URL
-    val cover_big = json.getString("cover_big") // URL
-    val cover_XL  = json.getString("cover_XL") // URL
-    val available = json.getBoolean("available")
-    val artist = Artist(json.getJSONObject("artist"))
-    val tracks = tracks(json.getJSONArray("tracks"))
+    // unused fields
+    val upc = json?.optString("upc")
+    val link = json?.optString("link")
+    val share = json?.optString("share")
+    val coverMedium = json?.optString("cover_medium")
+    val md5Image = json?.optString("md5_image")
+    val genreId = json?.optInt("genre_id")
+    val label = json?.optString("label")
+    val nbTracks = json?.optInt("nb_tracks")
+    val duration = json?.optInt("duration")
+    val fans = json?.optInt("fans")
+    val rating = json?.optInt("rating")
+    val releaseDate = json?.optString("release_date")
+    val recordType = json?.optString("record_type")
+    val available = json?.optBoolean("available")
+    val explicitLyrics = json?.optBoolean("explicit_lyrics")
+    val explicitContentLyrics = json?.optInt("explicit_content_lyrics")
+    val explicitContentCover = json?.optInt("explicit_content_cover")
 
-    //var coverImage by mutableStateOf(DEFAULT_IMAGE)
-    //var coverImageBig by mutableStateOf(DEFAULT_IMAGE)
+    constructor(jsonString: String?) : this(JSONObject(jsonString!!)) {
+        val tracks = json?.optJSONArray("tracks")?.map { Track(it) }
 
-    private fun tracks(trackList: JSONArray) : List<Track>{
-        val list: MutableList<Track> = mutableListOf()
-        for (i in 0 until trackList.length()) {
-            list.add(Track(trackList.getJSONObject(i)))
+        if (tracks != null) {
+            this.tracks = tracks
         }
-        return list
     }
 
 }

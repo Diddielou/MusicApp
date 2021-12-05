@@ -2,6 +2,11 @@ package fhnw.emoba.freezerapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val red       = Color(0xFFB00020)
+val darkRed   = Color(0xFF880E4F)
+val white1    = Color(0xFFF1F5FE)
+val white2    = Color(0xFFFFFFFA)
+
 val purple200 = Color(0xFFBB86FC)
 val purple500 = Color(0xFF6200EE)
 val purple700 = Color(0xFF3700B3)
@@ -22,6 +27,22 @@ val blueA100   = Color(0xFF82B1FF)
 val blueA200   = Color(0xFF448AFF)
 val blueA400   = Color(0xFF2979FF)
 val blueA700   = Color(0xFF2962FF)
+
+val cyan50   = Color(0xFFE0F7FA)
+val cyan100  = Color(0xFFB2DFDB)
+val cyan200  = Color(0xFB80DEEA)
+val cyan300  = Color(0xFF4DD0E1)
+val cyan400  = Color(0xFF26C6DA)
+val cyan500  = Color(0xFF00BCD4) // primary
+val cyan600  = Color(0xFF00ACC1)
+val cyan700  = Color(0xFF0097A7)
+val cyan800  = Color(0xFF00838F)
+val cyan900  = Color(0xFF00838F) // primaryVariant
+val cyanA200 = Color(0xFF18FFFF)  // secondary
+val cyanA700 = Color(0xFF00B8D4)  // secondaryVariant
+
+val pink900  = Color(0xFF880E4F)
+
 
 val lightBlue50   = Color(0xFFE1F5FE)
 val lightBlue100  = Color(0xFFB3E5FC)

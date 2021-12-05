@@ -9,29 +9,27 @@ import androidx.compose.ui.graphics.Color
 
 
 private val AppDarkColors = darkColors(
-//    primary = gray500,
-//    primaryVariant = gray600,
-//    secondary = blue400,
-
+    primary          =  Color(0xFFad1457),
+    primaryVariant   =  Color(0xFF78002e),
+    secondary        =  Color(0xFFffeb3b), // Color(0xFF9575cd),
+    secondaryVariant =  Color(0xFFffff72), // Color(0xFF65499c),
 )
-
 private val AppLightColors = lightColors(
     //Background colors
-        primary        = amber400,
-        primaryVariant = amber600,
-        secondary      = purple200,
-        
-        secondaryVariant = Color(0xFF03DAC6),
-        background       = Color(0xFFF1F5FE),
-        surface          = Color(0xFFFFFFFA), //Color(0xFFF8FCFD),
-        error            = Color(0xFFB00020),
+    primary          = Color(0xFFad1457),
+    primaryVariant   = Color(0xFF78002e),
+    secondary        = Color(0xFF00796b),
+    secondaryVariant = Color(0xFF004c40),
+    background       = white1,
+    surface          = white2,
+    error            = red,
 
     //Typography and icon colors
-        onPrimary        = Color.White,
-        onSecondary      = Color.Black,
-        onBackground     = Color.Black,
-        onSurface        = Color.Black,
-        onError          = Color.White
+    onPrimary        = Color.White,
+    onSecondary      = Color.Black,
+    onBackground     = Color.Black,
+    onSurface        = Color.Black,
+    onError          = Color.White
 )
 
 @Composable

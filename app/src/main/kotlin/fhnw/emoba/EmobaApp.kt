@@ -33,4 +33,10 @@ interface EmobaApp {
     fun onStop(activity: ComponentActivity) {
         // Default: Nichts zu tun
     }
+
+    /**
+     * Für Splashscreen
+     */
+
+
 }
