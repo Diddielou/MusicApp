@@ -11,9 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fhnw.emoba.freezerapp.data.impl.RemoteFreezerService
 import fhnw.emoba.freezerapp.model.FreezerModel
 import fhnw.emoba.freezerapp.model.Screen
 
@@ -32,9 +30,8 @@ fun PlayerScreen(model: FreezerModel){
 @Composable
 private fun Body(model: FreezerModel) {
     Column(verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.CenterHorizontally,
-           modifier            = Modifier
-               .fillMaxSize()
-               .padding(40.dp, 25.dp, 40.dp, 40.dp))
+        modifier = Modifier.fillMaxSize()
+            .padding(40.dp, 25.dp, 40.dp, 0.dp))
     {
         SongView(model) // Row
         PlayerControls(model) // Row
@@ -44,57 +41,36 @@ private fun Body(model: FreezerModel) {
 
 @Composable
 private fun SongView(model: FreezerModel){
-    Column(verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.CenterHorizontally) {
-    //Row(horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.Top){
-        AlbumCover(model = model) // Row
-        SongInformation(model = model) // Row
+    Column(verticalArrangement = Arrangement.Top,
+           modifier = Modifier.fillMaxWidth()) {
+        AlbumCover(model = model)
+        SongInformation(model = model)
     }
 }
 
 @Composable
 private fun AlbumCover(model: FreezerModel) {
     with(model) {
-        Row{
-            selectedTrack?.album?.let { AlbumCoverBig(it) }
-        }
+       selectedTrack?.album?.let { AlbumCoverBig(it) }
     }
 }
 
 @Composable
 private fun SongInformation(model: FreezerModel) {
     with(model) {
-        Row(
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.Top,
-            modifier = Modifier.fillMaxWidth()
-                .requiredHeight(190.dp)
-        ){
-            Column(modifier = Modifier.fillMaxWidth()) {
-                Row(modifier = Modifier.fillMaxWidth()
-                        .padding(0.dp)
-                        .height(28.dp)
-                ){
-                    Column(horizontalAlignment = Alignment.End,
-                        modifier = Modifier.fillMaxWidth()) {
-                        selectedTrack?.let { FavoriteIcon(model = model, track = it) }
-                    }
-                }
-                Row{
-                    Column(horizontalAlignment = Alignment.Start,
-                           modifier = Modifier.fillMaxWidth()){
-                        Row{
-                            selectedTrack?.title?.let { Heading1(text = it) }
-                        }
-                        Row {
-                            selectedTrack?.artist?.name?.let { Heading2(text = it) }
-                        }
-                        Row{
-                            selectedTrack?.album?.title?.let { Heading3(text = it) }
-                        }
-                    }
-                }
-            }
+        Column(modifier = Modifier.fillMaxWidth().requiredHeight(30.dp).padding(0.dp, 0.dp, 0.dp, 5.dp),
+               verticalArrangement = Arrangement.Top,
+               horizontalAlignment = Alignment.End) {
+            // Not enough on the right, can't find out why?
+            selectedTrack?.let { FavoriteIcon(model = model, track = it) }
         }
+        Column(modifier = Modifier.fillMaxWidth().requiredHeight(160.dp),
+               verticalArrangement = Arrangement.Top,
+               horizontalAlignment = Alignment.Start) {
+            selectedTrack?.title?.let { Heading1(text = it) }
+            selectedTrack?.artist?.name?.let { Heading2(text = it) }
+            selectedTrack?.album?.title?.let { Heading3(text = it) }
+       }
     }
 }
 
@@ -107,10 +83,10 @@ private fun PlayerControls(model: FreezerModel){
             .requiredHeight(100.dp),
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically,
-        ){
-            PlayFromStartButton(model) // no container
-            PlayPauseButton(model) // no container
-            PlayNextButton(model) // no container
+    ){
+        PlayFromStartButton(model)
+        PlayPauseButton(model)
+        PlayNextButton(model)
     }
 }
 
@@ -163,13 +139,4 @@ private fun PlayPauseButton(model: FreezerModel){
             }
         }
     }
-}
-
-
-
-
-@Preview()
-@Composable
-private fun SongInformationPreview(){
-    SongInformation(FreezerModel(service = RemoteFreezerService()))
 }
