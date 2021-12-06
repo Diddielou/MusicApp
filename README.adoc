@@ -27,20 +27,20 @@ Die im Unterricht gezeigte App ist nur eine mögliche Umsetzung des gewünschten
 Anforderungen:
 
 * Gewünschte Funktionalität
-** Suche nach Album, nach Song, Anzeige der Radio-Stations und verwalten von Lieblings-Songs.
-*** Anzeige der Liste von gefundenen Songs
-*** Anzeige der Liste der gefundenen Alben und der Liste der Songs eines Albums
-*** Anzeige der Liste der Songs einer Radio-Station
-*** Anzeige der Liste von Lieblings-Songs
-** Abspielen, Pausieren von Songs einer Song-Liste. Nochmaliges Spielen eines Songs von Beginn an. Sprung zum nächsten Song.
-* Verwendung des Deezer-API
+** Suche nach Album, nach Song, Anzeige der Radio-Stations und verwalten von Lieblings-Songs. ✔
+*** Anzeige der Liste von gefundenen Songs ✔
+*** Anzeige der Liste der gefundenen Alben und der Liste der Songs eines Albums ✔
+*** Anzeige der Liste der Songs einer Radio-Station ✔
+*** Anzeige der Liste von Lieblings-Songs ✔
+** Abspielen, Pausieren von Songs einer Song-Liste. ✔ Nochmaliges Spielen eines Songs von Beginn an. ✔ Sprung zum nächsten Song. ✔
+* Verwendung des Deezer-API ✔
 ** https://developers.deezer.com/api
-* Das UI ist komplett mit Jetpack Compose zu implementieren.
+* Das UI ist komplett mit Jetpack Compose zu implementieren. ✔
 ** https://developer.android.com/jetpack/compose
-* Implementierungssprache für die gesamte Applikation ist Kotlin.
-* Die im Unterricht erarbeitete Grundstruktur einer Android-App ist anzuwenden.
-* Das Deezer-Logo muss an prominenter Stelle sichtbar sein (Vorgabe aus den Lizenzbedingungen)
-* Weitere Libraries als die, die im Unterricht verwendet wurden, sind nicht erlaubt.
+* Implementierungssprache für die gesamte Applikation ist Kotlin. ✔
+* Die im Unterricht erarbeitete Grundstruktur einer Android-App ist anzuwenden. ✔
+* Das Deezer-Logo muss an prominenter Stelle sichtbar sein (Vorgabe aus den Lizenzbedingungen) ✔
+* Weitere Libraries als die, die im Unterricht verwendet wurden, sind nicht erlaubt. → navigation-compose:2.4.0-alpha06, abgesprochen ✔
 
 
 === Bewertung
