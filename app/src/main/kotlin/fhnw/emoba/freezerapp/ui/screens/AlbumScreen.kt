@@ -72,10 +72,10 @@ private fun AlbumCover(model: FreezerModel) {
 private fun AlbumDetails(model: FreezerModel) {
     with(model) {
         Row {
-            selectedAlbum?.title?.let { Heading2(it) }
+            selectedAlbum?.title?.let { Heading1(it) }
         }
         Row {
-            selectedAlbum?.artist?.name?.let { Heading3(text = it) }
+            selectedAlbum?.artist?.name?.let { Heading2(text = it) }
         }
     }
 }

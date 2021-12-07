@@ -7,21 +7,21 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-
+// https://material.io/resources/color/
 private val AppDarkColors = darkColors(
-    primary          =  Color(0xFFad1457),
-    primaryVariant   =  Color(0xFF78002e),
-    secondary        =  Color(0xFFffeb3b), // Color(0xFF9575cd),
-    secondaryVariant =  Color(0xFFffff72), // Color(0xFF65499c),
+    primary          =  Color(0xFFad1457), // Pink800
+    primaryVariant   =  Color(0xFF78002e), // Dark
+    secondary        =  Color(0xFFffeb3b), // Yellow500
+    secondaryVariant =  Color(0xFFffff72), // Light
 )
 private val AppLightColors = lightColors(
     //Background colors
-    primary          = Color(0xFFad1457),
-    primaryVariant   = Color(0xFF78002e),
-    secondary        = Color(0xFF00796b),
-    secondaryVariant = Color(0xFF004c40),
+    primary          = Color(0xFFad1457), // Pink800
+    primaryVariant   = Color(0xFF78002e), // Dark
+    secondary        = Color(0xFF303f9f), // Indigo700
+    secondaryVariant = Color(0xFF001970), // Dark
     background       = white1,
-    surface          = white2,
+    surface          = white1,
     error            = red,
 
     //Typography and icon colors
