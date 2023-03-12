@@ -1,20 +1,15 @@
-== Emoba Assignment 1 - FreezerApp
+== MusicApp
 
-=== Bearbeitet von
+A student project as part of the module "Mobile application development" taught by Dr. Dieter Holz at the University of Applied Sciences Northwestern (FHNW)
 
-* Dinah Bolli
+=== Screenshots
+[cols="a,a", frame=none, grid=none]
+|===
+| image::./app/src/main/res/MusicApp1.png[height=400, float=left]
+| image::./app/src/main/res/MusicApp2.png[height=400, float=left]
+|===
 
-=== Abgabe
-
-* _Klasse 5iCa_, Montag, 6.12.2021, 8:00 Uhr
-* _Klasse 5iCb_, Mittwoch, 8.12.2021, 12:00 Uhr
-
-Die Abgabe erfolgt durch ein "Push" auf den Master-Branch Ihres GitHub-Repositories.
-
-=== Initiale Schritte
-
-* Tragen Sie ihren Namen unter "Bearbeitet von" ein.
-* Pushen Sie diese Änderung am besten sofort ins Git-Repository (z.B. via "VCS -> Commit… -> Commit&Push")
+Assignment description in German:
 
 === Die Aufgabe: MusicPlayer für Deezer
 
